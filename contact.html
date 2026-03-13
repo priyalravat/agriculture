@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriCulture Responsive</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="contact.css">
+  <style>
+    body{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    /* Navbar */
+    .navbar-custom {
+      background-color: #2d6a4f;
+      animation: scale-up-ver-center 0.6s ease-out;
+    }
+    .navbar-custom .nav-link { color: black; }
+    .navbar-custom .nav-link:hover { color: #fff; }
+
+    /* Carousel */
+    .carousel-item {
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .carousel-item::after {
+      content: '';
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.4);
+    }
+    .carousel-caption {
+      z-index: 2;
+      background: rgba(0,0,0,0.5);
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    /* Animations */
+    @keyframes scale-up-ver-center {
+      0% { transform: scaleY(0.4); opacity: 0; }
+      100% { transform: scaleY(1); opacity: 1; }
+    }
+    .scale-up-ver-center {
+      animation: scale-up-ver-center 0.6s ease-in-out both;
+    }
+
+    /* Service Section */
+    .service-box {
+      background: #fff;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform .3s, box-shadow .3s;
+    }
+    .service-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+    .service-icon {
+      font-size: 2.5rem;
+      color: #28a745;
+      margin-bottom: 10px;
+    }
+
+    /* Newsletter */
+    .newsletter {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .newsletter input {
+      border-radius: 30px 0 0 30px;
+    }
+    .newsletter button {
+      border-radius: 0 30px 30px 0;
+      background: #2d6a4f;
+      color: #fff;
+      font-weight: 600;
+    }
+    .newsletter button:hover { background: #1b4332; }
+
+    /* Footer */
+    .footer {
+      background: #2d6a4f;
+      color: #fff;
+      padding: 60px 20px 20px;
+    }
+    .footer h5 { font-weight: 700; margin-bottom: 20px; }
+    .footer a { color: #d8f3dc; text-decoration: none; }
+    .footer a:hover { color: #b7e4c7; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.2);
+      text-align: center;
+      margin-top: 20px;
+      padding-top: 10px;
+      font-size: 14px;
+    }
+        .why-section {
+    
+      color: black;
+      padding: 60px 20px;
+      border-radius: 12px;
+    }
+    .why-section h2 {
+      font-weight: 700;
+    }
+    .feature-box {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .feature-box i {
+      font-size: 30px;
+      color: black;
+    }
+    .side-img img {
+      border-radius: 12px;
+      transition: transform 0.6s ease;
+    }
+    .side-img img:hover {
+      transform: scale(1.1);
+    }
+     body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .testimonials-section {
+    padding: 60px 20px;
+    background: #f0fdf4;
+  }
+  .testimonials-section h2 {
+    color: #2d6a4f;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  .testimonials-section p.description {
+    color: #333;
+    margin-bottom: 40px;
+  }
+  .testimonial-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .testimonial-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.5s ease;
+  }
+  .testimonial-card img:hover {
+    transform: scale(1.2); /* Zoom animation on hover */
+  }
+  .testimonial-card h5 {
+    margin-top: 10px;
+    font-weight: 600;
+    color: #2d6a4f;
+  }
+  .testimonial-card p {
+    font-style: italic;
+    color: #555;
+  }
+  .footer {
+      background: #2d6a4f;
+      color: #fff;
+      padding: 60px 20px 20px;
+    }
+    .footer h5 { font-weight: 700; margin-bottom: 20px; }
+    .footer a { color: #d8f3dc; text-decoration: none; }
+    .footer a:hover { color: #b7e4c7; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.2);
+      text-align: center;
+      margin-top: 20px;
+      padding-top: 10px;
+      font-size: 14px;
+    }
+      .footer {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      background: #2d6a4f;
+      color: #fff;
+      padding: 60px 20px 20px;
+    }
+    .footer h5 {
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    .footer p, .footer a, .footer li {
+      color: #d8f3dc;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: #b7e4c7;
+    }
+    .footer ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer ul li {
+      margin-bottom: 8px;
+      transition: transform 0.3s ease;
+    }
+    .footer ul li:hover {
+      transform: translateX(5px);
+    }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      font-size: 14px;
+      margin-top: 30px;
+    }
+ body {
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      background: #f8fafc;
+    }
+    .recent-posts {
+      padding: 60px 20px;
+    }
+    .recent-posts h2 {
+      font-weight: 700;
+      color: #2d6a4f;
+    }
+    .recent-posts p.description {
+      margin-bottom: 40px;
+      color: #555;
+    }
+    .post-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease;
+    }
+    .post-card:hover {
+      transform: translateY(-10px);
+    }
+    .post-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .post-card img:hover {
+      transform: scale(1.1); /* Zoom animation */
+    }
+    .post-content {
+      padding: 20px;
+      text-align: left;
+    }
+    .post-date {
+      font-size: 14px;
+      font-weight: 600;
+      color: #2d6a4f;
+      margin-bottom: 8px;
+    }
+    .post-content h5 {
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #222;
+    }
+    .post-meta {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 15px;
+    }
+    .post-meta span {
+      font-weight: 600;
+      color: #2d6a4f;
+    }
+    .read-more {
+      font-weight: 600;
+      color: #2d6a4f;
+      text-decoration: none;
+    }
+    .read-more i {
+      margin-left: 6px;
+      transition: margin-left 0.3s;
+    }
+    .read-more:hover i {
+      margin-left: 12px;
+    }
+     body {
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      background: #f8fafc;
+    }
+    .numbers-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .btn-number {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin: 8px;
+      font-size: 20px;
+      font-weight: bold;
+      background-color: #2d6a4f;
+      color: #fff;
+      border: none;
+      transition: transform 0.4s ease;
+    }
+    .btn-number:hover {
+      transform: scale(1.2); /* zoom animation on hover */
+      background-color: #40916c;
+    }
+      body {
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      background-color: #f8f9fa;
+    }
+    .map-container {
+  margin: 50px auto;
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 350px;
+  border: 0;
+}
+
+/* Mobile responsive */
+@media (max-width:768px){
+  .map-container iframe{
+    height:250px;
+  }
+}
+        body {
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      background: #f8f9fa;
+    }
+    .contact-section {
+      padding: 60px 20px;
+    }
+    .info-box {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+      transition: transform 0.4s ease;
+    }
+    .info-box:hover {
+      transform: scale(1.05);
+    }
+    .info-box i {
+      font-size: 28px;
+      color: #2d6a4f;
+      margin-right: 15px;
+    }
+    .form-control, textarea {
+      border-radius: 8px;
+      box-shadow: none;
+      transition: box-shadow 0.3s ease;
+    }
+    .form-control:focus, textarea:focus {
+      box-shadow: 0 0 8px rgba(45,106,79,0.5);
+      border-color: #2d6a4f;
+    }
+    .btn-send {
+      background: #2d6a4f;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 8px;
+      padding: 10px 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .btn-send:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center text-white" href="#">
+        <i class="fa-solid fa-leaf me-2"></i> AgriCulture
+      </a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto text-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="AgriCulture.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="Our Services.html">Our Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="Blog.html">Blog</a></li>
+        
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carousel -->
+  <div id="agriCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="background-image:url('https://images.pexels.com/photos/3040710/pexels-photo-3040710.jpeg');">
+        <div class="carousel-caption">
+          <h2 class="scale-up-ver-center">Contact</h2>
+          <p class="scale-up-ver-center">Organic vegetables are good for health and our future.</p>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image:url('https://images.pexels.com/photos/946186/pexels-photo-946186.jpeg');">
+        <div class="carousel-caption">
+          <h2 class="scale-up-ver-center">Green & Fresh</h2>
+          <p class="scale-up-ver-center">We provide fresh produce every single day.</p>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image:url('https://images.pexels.com/photos/1442398/pexels-photo-1442398.jpeg');">
+        <div class="carousel-caption">
+          <h2 class="scale-up-ver-center">Sustainable Farming</h2>
+          <p class="scale-up-ver-center">Healthy crops with eco-friendly methods.</p>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image:url('https://images.pexels.com/photos/461284/pexels-photo-461284.jpeg');">
+        <div class="carousel-caption">
+          <h2 class="scale-up-ver-center">Love Organic</h2>
+          <p class="scale-up-ver-center">Bringing nature’s best to your plate.</p>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image:url('https://images.pexels.com/photos/34013404/pexels-photo-34013404.jpeg');">
+        <div class="carousel-caption">
+          <h2 class="scale-up-ver-center">Future is Green</h2>
+          <p class="scale-up-ver-center">Farming builds a better tomorrow.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#agriCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#agriCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+ 
+<br>
+<br>
+ 
+  
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 animate__animated animate__zoomIn animate__delay-1s">
+      <h2 class="text-center mb-4 animate__animated animate__scaleUpLeft">📍 Downtown Conference Center</h2>
+      <p class="text-center">157 William St, New York, NY 10038, United States</p>
+      <div class="map-container animate__animated animate__zoomIn">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.567597874755!2d-74.006015384594!3d40.71006297933183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a19bd0e6d2f%3A0x5e9a5a5a8ba9b9a!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1695637430123!5m2!1sen!2sus" 
+          allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+      <p class="text-center mt-3">⭐ 4.3 (84 reviews) | <a href="#" target="_blank">View larger map</a></p>
+    </div>
+  </div>
+</div>
+
+<section class="contact-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="animate__animated animate__scaleUpLeft">Get in Touch</h2>
+      <p class="text-muted animate__animated animate__zoomIn">
+        Et id eius voluptates atque nihil voluptatem enim in tempore minima sit ad mollitia commodi minus.
+      </p>
+    </div>
+
+    <div class="row">
+      <!-- Contact Info -->
+      <div class="col-md-4">
+        <div class="info-box animate__animated animate__zoomIn">
+          <i class="fas fa-map-marker-alt"></i>
+          <strong>Location:</strong>
+          <p>A108 Adam Street, New York, NY 535022</p>
+        </div>
+        <div class="info-box animate__animated animate__zoomIn">
+          <i class="fas fa-envelope"></i>
+          <strong>Email:</strong>
+          <p>info@example.com</p>
+        </div>
+        <div class="info-box animate__animated animate__zoomIn">
+          <i class="fas fa-phone"></i>
+          <strong>Call:</strong>
+          <p>+1 5589 55488 55</p>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-md-8">
+        <form>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <input type="text" class="form-control" placeholder="Your Name" required>
+            </div>
+            <br>
+            <div class="col-md-6">
+              <input type="email" class="form-control" placeholder="Your Email" required>
+            </div>
+          </div>
+          <br>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Subject" required>
+          </div>
+          <br>
+          <div class="mb-3">
+            <textarea rows="5" class="form-control" placeholder="Message" required></textarea>
+          </div>
+          <br>
+          <div class="text-center">
+            <button type="submit" class="btn btn-send animate__animated animate__zoomIn">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+   <!-- Newsletter -->
+  <section class="newsletter bg-light">
+    <div class="container">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>Stay updated with the latest from our farms</p>
+      <form class="d-flex justify-content-center">
+        <input type="email" class="form-control w-50" placeholder="Enter your email">
+        <button class="btn">Subscribe</button>
+      </form>
+    </div>
+  </section>
+<footer class="footer">
+  <div class="container">
+    <div class="row gy-4">
+
+      <!-- Company Info -->
+      <div class="col-md-3 animate__animated animate__scaleUpLeft">
+        <h5>AgriCulture</h5>
+        <p>A108 Adam Street<br>New York, NY 535022</p>
+        <p><strong>Phone:</strong> +1 5589 55488 55<br>
+           <strong>Email:</strong> info@example.com</p>
+      </div>
+
+      <!-- Useful Links -->
+      <div class="col-md-3 animate__animated animate__zoomIn">
+        <h5>Useful Links</h5>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Terms of service</a></li>
+          <li><a href="#">Privacy policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Our Services -->
+      <div class="col-md-3 animate__animated animate__zoomIn">
+        <h5>Our Services</h5>
+        <ul>
+          <li><a href="#">Web Design</a></li>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">Product Management</a></li>
+          <li><a href="#">Marketing</a></li>
+          <li><a href="#">Graphic Design</a></li>
+        </ul>
+      </div>
+
+      <!-- Extra Links -->
+      <div class="col-md-3 animate__animated animate__zoomIn">
+        <h5>More</h5>
+        <ul>
+          <li><a href="#">Hic solutasetp</a></li>
+          <li><a href="#">Molestiae accusamus iure</a></li>
+          <li><a href="#">Excepturi dignissimos</a></li>
+          <li><a href="#">Suscipit distinctio</a></li>
+          <li><a href="#">Dilecta</a></li>
+          <li><a href="#">Sit quas consectetur</a></li>
+          <li><a href="#">Nobis illum</a></li>
+          <li><a href="#">Ipsam</a></li>
+          <li><a href="#">Laudantium dolorum</a></li>
+          <li><a href="#">Dinera</a></li>
+          <li><a href="#">Trodelas</a></li>
+          <li><a href="#">Flexo</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom animate__animated animate__fadeInUp">
+      <p>© Copyright <strong>MyWebsite</strong>. All Rights Reserved</p>
+      <p>Designed by BootstrapMade | Distributed by ThemeWagon</p>
+    </div>
+  </div>
+</footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
