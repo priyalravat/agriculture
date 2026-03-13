@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriCulture Responsive</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="Blog.css">
+ <style>
+    body{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    /* Navbar */
+    .navbar-custom {
+      background-color: #2d6a4f;
+      animation: scale-up-ver-center 0.6s ease-out;
+    }
+    .navbar-custom .nav-link { color: black; }
+    .navbar-custom .nav-link:hover { color: #fff; }
+
+    /* Carousel */
+    .carousel-item {
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .carousel-item::after {
+      content: '';
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.4);
+    }
+    .carousel-caption {
+      z-index: 2;
+      background: rgba(0,0,0,0.5);
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    /* Animations */
+    @keyframes scale-up-ver-center {
+      0% { transform: scaleY(0.4); opacity: 0; }
+      100% { transform: scaleY(1); opacity: 1; }
+    }
+    .scale-up-ver-center {
+      animation: scale-up-ver-center 0.6s ease-in-out both;
+    }
+
+    /* Service Section */
+    .service-box {
+      background: #fff;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform .3s, box-shadow .3s;
+    }
+    .service-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+    .service-icon {
+      font-size: 2.5rem;
+      color: #28a745;
+      margin-bottom: 10px;
+    }
+
+    /* Newsletter */
+    .newsletter {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .newsletter input {
+      border-radius: 30px 0 0 30px;
+    }
+    .newsletter button {
+      border-radius: 0 30px 30px 0;
+      background: #2d6a4f;
+      color: #fff;
+      font-weight: 600;
+    }
+    .newsletter button:hover { background: #1b4332; }
+
+    /* Footer */
+    .footer {
+      background: #2d6a4f;
+      color: #fff;
+      padding: 60px 20px 20px;
+    }
+    .footer h5 { font-weight: 700; margin-bottom: 20px; }
+    .footer a { color: #d8f3dc; text-decoration: none; }
+    .footer a:hover { color: #b7e4c7; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.2);
+      text-align: center;
+      margin-top: 20px;
+      padding-top: 10px;
+      font-size: 14px;
+    }
+        .why-section {
+    
+      color: black;
+      padding: 60px 20px;
+      border-radius: 12px;
+    }
+    .why-section h2 {
+      font-weight: 700;
+    }
+    .feature-box {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .feature-box i {
+      font-size: 30px;
+      color: black;
+    }
+    .side-img img {
+      border-radius: 12px;
+      transition: transform 0.6s ease;
+    }
+    .side-img img:hover {
+      transform: scale(1.1);
+    }
+     body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .testimonials-section {
+    padding: 60px 20px;
+    background: #f0fdf4;
+  }
+  .testimonials-section h2 {
+    color: #2d6a4f;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  .testimonials-section p.description {
+    color: #333;
+    margin-bottom: 40px;
+  }
+  .testimonial-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .testimonial-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.5s ease;
+  }
+  .testimonial-card img:hover {
+    transform: scale(1.2); /* Zoom animation on hover */
+  }
+  .testimonial-card h5 {
+    margin-top: 10px;
+    font-weight: 600;
+    color: #2d6a4f;
+  }
+  .testimonial-card p {
+    font-style: italic;
+    color: #555;
+  }
+  .footer {
+      background: #2d6a4f;
+      color: #fff;
+      padding: 60px 20px 20px;
+    }
+    .footer h5 { font-weight: 700; margin-bottom: 20px; }
+    .footer a { color: #d8f3dc; text-decoration: none; }
+    .footer a:hover { color: #b7e4c7; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.2);
+      text-align: center;
+      margin-top: 20px;
+      padding-top: 10px;
+      font-size: 14px;
+    }
+      .footer {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      background: #2d6a4f;
+      color: #fff;
+      padding: 60px 20px 20px;
+    }
+    .footer h5 {
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    .footer p, .footer a, .footer li {
+      color: #d8f3dc;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: #b7e4c7;
+    }
+    .footer ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer ul li {
+      margin-bottom: 8px;
+      transition: transform 0.3s ease;
+    }
+    .footer ul li:hover {
+      transform: translateX(5px);
+    }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      font-size: 14px;
+      margin-top: 30px;
+    }
+ body {
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      background: #f8fafc;
+    }
+    .recent-posts {
+      padding: 60px 20px;
+    }
+    .recent-posts h2 {
+      font-weight: 700;
+      color: #2d6a4f;
+    }
+    .recent-posts p.description {
+      margin-bottom: 40px;
+      color: #555;
+    }
+    .post-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease;
+    }
+    .post-card:hover {
+      transform: translateY(-10px);
+    }
+    .post-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .post-card img:hover {
+      transform: scale(1.1); /* Zoom animation */
+    }
+    .post-content {
+      padding: 20px;
+      text-align: left;
+    }
+    .post-date {
+      font-size: 14px;
+      font-weight: 600;
+      color: #2d6a4f;
+      margin-bottom: 8px;
+    }
+    .post-content h5 {
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #222;
+    }
+    .post-meta {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 15px;
+    }
+    .post-meta span {
+      font-weight: 600;
+      color: #2d6a4f;
+    }
+    .read-more {
+      font-weight: 600;
+      color: #2d6a4f;
+      text-decoration: none;
+    }
+    .read-more i {
+      margin-left: 6px;
+      transition: margin-left 0.3s;
+    }
+    .read-more:hover i {
+      margin-left: 12px;
+    }
+     body {
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      background: #f8fafc;
+    }
+    .numbers-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .btn-number {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin: 8px;
+      font-size: 20px;
+      font-weight: bold;
+      background-color: #2d6a4f;
+      color: #fff;
+      border: none;
+      transition: transform 0.4s ease;
+    }
+    .btn-number:hover {
+      transform: scale(1.2); /* zoom animation on hover */
+      background-color: #40916c;
+    }
+
+ </style>
+  
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center text-white" href="#">
+        <i class="fa-solid fa-leaf me-2"></i> AgriCulture
+      </a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto text-center">
+          <li class="nav-item"><a class="nav-link" href="AgriCulture.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="Our Services.html">Our Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="Blog.html">Blog</a></li>
+        
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carousel -->
+  <div id="agriCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="background-image:url('https://images.pexels.com/photos/3876417/pexels-photo-3876417.jpeg');">
+        <div class="carousel-caption">
+          <h2 class="scale-up-ver-center">Blog</h2>
+          <p class="scale-up-ver-center">Organic vegetables are good for health and our future.</p>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image:url('https://images.pexels.com/photos/247597/pexels-photo-247597.jpeg');">
+        <div class="carousel-caption">
+          <h2 class="scale-up-ver-center">Green & Fresh</h2>
+          <p class="scale-up-ver-center">We provide fresh produce every single day.</p>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image:url('https://images.pexels.com/photos/2332736/pexels-photo-2332736.jpeg');">
+        <div class="carousel-caption">
+          <h2 class="scale-up-ver-center">Sustainable Farming</h2>
+          <p class="scale-up-ver-center">Healthy crops with eco-friendly methods.</p>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image:url('https://images.pexels.com/photos/2506831/pexels-photo-2506831.jpeg');">
+        <div class="carousel-caption">
+          <h2 class="scale-up-ver-center">Love Organic</h2>
+          <p class="scale-up-ver-center">Bringing nature’s best to your plate.</p>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image:url('https://images.pexels.com/photos/2148852/pexels-photo-2148852.jpeg');">
+        <div class="carousel-caption">
+          <h2 class="scale-up-ver-center">Future is Green</h2>
+          <p class="scale-up-ver-center">Farming builds a better tomorrow.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#agriCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#agriCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+ 
+
+ 
+  
+<section class="testimonials-section">
+  <div class="container text-center">
+
+    <!-- Heading + Description -->
+    <div class="animate__animated animate__scaleUpLeft">
+      <h2>TESTIMONIALS</h2>
+      <p class="description">Necessitatibus eius consequatur</p>
+    </div>
+
+    <div class="row justify-content-center">
+
+      <!-- Testimonial 1 -->
+      <div class="col-md-12">
+        <div class="testimonial-card animate__animated animate__zoomIn">
+          <img src="testimonials-1.jpg" alt="James Smith">
+          <p>“Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident deleniti iusto molestias, dolore vel fugiat ab placeat ea?”</p>
+          <h5>James Smith</h5>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="col-md-12">
+        <div class="testimonial-card animate__animated animate__zoomIn">
+          <img src="testimonials-2.jpg" alt="Kate Smith">
+          <p>“Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident deleniti iusto molestias, dolore vel fugiat ab placeat ea?”</p>
+          <h5>Kate Smith</h5>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="col-md-12">
+        <div class="testimonial-card animate__animated animate__zoomIn">
+          <img src="testimonials-3.jpg" alt="Claire Anderson">
+          <p>“Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident deleniti iusto molestias, dolore vel fugiat ab placeat ea?”</p>
+          <h5>Claire Anderson</h5>
+        </div>
+      </div>
+
+      <!-- Testimonial 4 -->
+      <div class="col-md-12">
+        <div class="testimonial-card animate__animated animate__zoomIn">
+          <img src="testimonials-4.jpg" alt="Dan Smith">
+          <p>“Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident deleniti iusto molestias, dolore vel fugiat ab placeat ea?”</p>
+          <h5>Dan Smith</h5>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+   <!-- Newsletter -->
+  <section class="newsletter bg-light">
+    <div class="container">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>Stay updated with the latest from our farms</p>
+      <form class="d-flex justify-content-center">
+        <input type="email" class="form-control w-50" placeholder="Enter your email">
+        <button class="btn">Subscribe</button>
+      </form>
+    </div>
+  </section>
+<footer class="footer">
+  <div class="container">
+    <div class="row gy-4">
+
+      <!-- Company Info -->
+      <div class="col-md-3 animate__animated animate__scaleUpLeft">
+        <h5>AgriCulture</h5>
+        <p>A108 Adam Street<br>New York, NY 535022</p>
+        <p><strong>Phone:</strong> +1 5589 55488 55<br>
+           <strong>Email:</strong> info@example.com</p>
+      </div>
+
+      <!-- Useful Links -->
+      <div class="col-md-3 animate__animated animate__zoomIn">
+        <h5>Useful Links</h5>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Terms of service</a></li>
+          <li><a href="#">Privacy policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Our Services -->
+      <div class="col-md-3 animate__animated animate__zoomIn">
+        <h5>Our Services</h5>
+        <ul>
+          <li><a href="#">Web Design</a></li>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">Product Management</a></li>
+          <li><a href="#">Marketing</a></li>
+          <li><a href="#">Graphic Design</a></li>
+        </ul>
+      </div>
+
+      <!-- Extra Links -->
+      <div class="col-md-3 animate__animated animate__zoomIn">
+        <h5>More</h5>
+        <ul>
+          <li><a href="#">Hic solutasetp</a></li>
+          <li><a href="#">Molestiae accusamus iure</a></li>
+          <li><a href="#">Excepturi dignissimos</a></li>
+          <li><a href="#">Suscipit distinctio</a></li>
+          <li><a href="#">Dilecta</a></li>
+          <li><a href="#">Sit quas consectetur</a></li>
+          <li><a href="#">Nobis illum</a></li>
+          <li><a href="#">Ipsam</a></li>
+          <li><a href="#">Laudantium dolorum</a></li>
+          <li><a href="#">Dinera</a></li>
+          <li><a href="#">Trodelas</a></li>
+          <li><a href="#">Flexo</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom animate__animated animate__fadeInUp">
+      <p>© Copyright <strong>MyWebsite</strong>. All Rights Reserved</p>
+      <p>Designed by BootstrapMade | Distributed by ThemeWagon</p>
+    </div>
+  </div>
+</footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
